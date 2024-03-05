@@ -1,0 +1,47 @@
+﻿<Window x:Class="Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab2" d:DataContext="{d:DesignInstance Type=local:StartText}"
+        mc:Ignorable="d"
+        Title="Doynikov N.A. Lex/Synt Analyzer" Height="768" Width="1024" WindowStartupLocation="CenterScreen">
+
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBox x:Name="TextInput"
+                 Text="{Binding SText}"
+                 Grid.Row="0"
+                 AcceptsReturn="True"
+                 FontSize="20"
+                 VerticalScrollBarVisibility="Auto"
+                 HorizontalScrollBarVisibility="Auto"/>
+        <StackPanel Grid.Column="1" Margin="10" >
+            <Button Content="Lex"
+                    Margin="10 10 10 0" Click="LexButton_Click"/>
+            <Button Content="Syn"
+                    Margin="10 10 10 0"/>
+            <Label Margin="10 10 10 0" Content="ИВТ-426б" VerticalAlignment="Bottom" FontSize="12"/>
+            <Label Margin="10 -10 10 0" Content="Дойников Н.А." VerticalAlignment="Bottom" FontSize="12"/>
+        </StackPanel>
+        <TextBox Grid.Column="2"
+                 x:Name="textOut"
+                 FontSize="20"
+                 HorizontalScrollBarVisibility="Auto"
+                 VerticalScrollBarVisibility="Auto"
+                 IsReadOnly="True"/>
+
+
+
+
+
+    </Grid>
+    
+    
+    
+</Window>
